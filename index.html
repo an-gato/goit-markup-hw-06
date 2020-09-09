@@ -442,43 +442,28 @@
           <span class="marker-name">Комментарий</span>
           <textarea class="comm-text" name="comm" id="comm" rows="5" placeholder="Введите текст"></textarea>
         </label>
+
+        <label class="agreement">
+          <input class="checkbox" type="checkbox">
+          <span class="agree-box"></span>
+          <span class="label">Соглашаюсь с рассылкой и принимаю
+            <a href="#" class="agree">Условия договора</a>
+          </span>
+        </label>
+
+        <button class="style-btn" type="submit">Отправить</button>
+
+      </form>
+
+      <button class="button-close" data-modal-close>
+        <svg class="icon-close" width="18" height="18">
+          <use xlink:href="../modal-view/sprite.svg#close"></use>
+        </svg>
+      </button>
+
     </div>
-
-    <label class="agreement">
-      <input class="checkbox" type="checkbox">
-      <span class="agree-box"></span>
-      <span class="label">Соглашаюсь с рассылкой и принимаю
-        <a href="#" class="agree">Условия договора</a>
-      </span>
-    </label>
-
-    <button class="style-btn" type="submit">Отправить</button>
-
-    </form>
-
-    <button class="button-close" data-modal-close>
-      <svg class="icon-close" width="18" height="18">
-        <use xlink:href="../modal-view/sprite.svg#close"></use>
-      </svg>
-    </button>
-
-  </div>
   </div>
   <script src=" ./js/modal.js"></script>
-  <script>
-    (() => {
-      document
-        .querySelector('.form')
-        .addEventListener('submit', e => {
-          e.preventDefault();
-
-          new FormData(e.currentTarget).forEach((value, name) =>
-            console.log(`${name}: ${value}`),
-          );
-        });
-    })();
-  </script>
-
 
 </body>
 
